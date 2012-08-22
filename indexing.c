@@ -1,3 +1,7 @@
+#include <string.h>
+
+#define NELEMS(a) ((int) (sizeof(a) / sizeof(a[0])))
+
 int nameToNumber3(const char *name)
 {
     static const struct map
@@ -5,7 +9,13 @@ int nameToNumber3(const char *name)
         const char name[7]; /* NB. PIC */
         int        value;
     }
-    map[] = ...
+    map[] =
+    {
+        { "John",   5 },
+        { "Paul",   2 },
+        { "George", 9 },
+        { "Ringo",  3 }
+    };
 
     const struct map *entry, *end;
 

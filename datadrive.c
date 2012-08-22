@@ -1,3 +1,5 @@
+#include <string.h>
+
 int nameToNumber(const char *name)
 {
     if      (strcmp(name, "John")   == 0) return 5;
