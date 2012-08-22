@@ -1,3 +1,5 @@
+typedef unsigned int ShipFlags;
+
 typedef struct {
     unsigned int hasLasers   : 1;
     unsigned int hasMissiles : 1;

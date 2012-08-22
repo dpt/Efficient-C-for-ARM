@@ -43,7 +43,7 @@ lib		= libarm.a
 
 # Objects
 
-src		= datadrive.c indexing.c
+src		= $(shell find . -name "*.c")
 objs		= $(src:.c=.o)
 deps		= $(src:.c=.d)
 

@@ -4,6 +4,7 @@ struct
     int           product;
     short         delta;
 }
+structA;
 
 struct
 {
@@ -11,6 +12,7 @@ struct
     short         delta;
     unsigned char type;
 }
+structB;
 
 // write a function which prints sizeof the structures
 
