@@ -14,5 +14,6 @@ struct
 }
 structB;
 
-// write a function which prints sizeof the structures
+/* write a function which prints sizeof the structures */
 
+extern int ANSI;
