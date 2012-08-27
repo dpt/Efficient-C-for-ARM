@@ -1,3 +1,5 @@
+/* chains.c -- demonstrate that pointer chains can be wasteful */
+
 typedef struct {
     int x,y,z;
 } Point3;

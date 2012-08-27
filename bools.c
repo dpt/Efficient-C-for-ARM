@@ -1,3 +1,5 @@
+/* bools.c -- demonstrate that passing around multiple bools can be wasteful */
+
 typedef unsigned int bool;
 
 bool isEnemy(bool hasLasers,

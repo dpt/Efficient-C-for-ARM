@@ -1,3 +1,5 @@
+/* biasing.c -- demonstrate that biasing large constants can reduce code size on ARM */
+
 #define UNICODE_THAI_MAI_HAN_AKAT  0x0E31
 #define UNICODE_THAI_SARA_AM       0x0E33
 #define UNICODE_THAI_SARA_I        0x0E34
@@ -19,24 +21,24 @@
 
 int is_thai_dependent(int c)
 {
-    return c == UNICODE_THAI_MAI_HAN_AKAT  ||  /* 0x0E31 */
-           c == UNICODE_THAI_SARA_AM       ||  /* 0x0E33 */
-           c == UNICODE_THAI_SARA_I        ||  /* 0x0E34 */
-           c == UNICODE_THAI_SARA_II       ||  /* 0x0E35 */
-           c == UNICODE_THAI_SARA_UE       ||  /* 0x0E36 */
-           c == UNICODE_THAI_SARA_UEE      ||  /* 0x0E37 */
-           c == UNICODE_THAI_SARA_U        ||  /* 0x0E38 */
-           c == UNICODE_THAI_SARA_UU       ||  /* 0x0E39 */
-           c == UNICODE_THAI_PHINTHU       ||  /* 0x0E3A */
-           c == UNICODE_THAI_LAKKHANGYAO   ||  /* 0x0E45 */
-           c == UNICODE_THAI_MAITAIKHU     ||  /* 0x0E47 */
-           c == UNICODE_THAI_MAI_EK        ||  /* 0x0E48 */
-           c == UNICODE_THAI_MAI_THO       ||  /* 0x0E49 */
-           c == UNICODE_THAI_MAI_TRI       ||  /* 0x0E4A */
-           c == UNICODE_THAI_MAI_CHATTA_WA ||  /* 0x0E4B */
-           c == UNICODE_THAI_THANTHAKHAT   ||  /* 0x0E4C */
-           c == UNICODE_THAI_NIKHAHIT      ||  /* 0x0E4D */
-           c == UNICODE_THAI_YAMAKKAN;         /* 0x0E4E */
+    return c == UNICODE_THAI_MAI_HAN_AKAT  || /* 0x0E31 */
+           c == UNICODE_THAI_SARA_AM       || /* 0x0E33 */
+           c == UNICODE_THAI_SARA_I        || /* 0x0E34 */
+           c == UNICODE_THAI_SARA_II       || /* 0x0E35 */
+           c == UNICODE_THAI_SARA_UE       || /* 0x0E36 */
+           c == UNICODE_THAI_SARA_UEE      || /* 0x0E37 */
+           c == UNICODE_THAI_SARA_U        || /* 0x0E38 */
+           c == UNICODE_THAI_SARA_UU       || /* 0x0E39 */
+           c == UNICODE_THAI_PHINTHU       || /* 0x0E3A */
+           c == UNICODE_THAI_LAKKHANGYAO   || /* 0x0E45 */
+           c == UNICODE_THAI_MAITAIKHU     || /* 0x0E47 */
+           c == UNICODE_THAI_MAI_EK        || /* 0x0E48 */
+           c == UNICODE_THAI_MAI_THO       || /* 0x0E49 */
+           c == UNICODE_THAI_MAI_TRI       || /* 0x0E4A */
+           c == UNICODE_THAI_MAI_CHATTA_WA || /* 0x0E4B */
+           c == UNICODE_THAI_THANTHAKHAT   || /* 0x0E4C */
+           c == UNICODE_THAI_NIKHAHIT      || /* 0x0E4D */
+           c == UNICODE_THAI_YAMAKKAN;        /* 0x0E4E */
 }
 
 int is_thai_dependent2(int c)

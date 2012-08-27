@@ -1,3 +1,5 @@
+/* unrolling.c -- demonstrate that loops can be unrolled to increase speed */
+
 int countbits1(unsigned int N)
 {
     int nbits = 0;

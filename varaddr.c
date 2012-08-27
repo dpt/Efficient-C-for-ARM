@@ -1,3 +1,5 @@
+/* varaddr.c -- demonstrate that taking the address of a variable can result in a cost to accessing it */
+
 extern int getlimit(int *pN);
 
 /* armcc is clever enough in this case... */
@@ -34,6 +36,7 @@ int sum2(const int *array)
 }
 
 /* gcc 4.4.3 seems to show the problem when i add in a function call */
+/* ads armcc too */
 extern int fn(int);
 int sum3(const int *array)
 {

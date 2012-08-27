@@ -1,3 +1,5 @@
+/* hoisting.c -- demonstrate that moving constant decisions out of loops results in less wasted work */
+
 extern void translate(int);
 extern void get_metrics(int);
 extern void draw(int);

@@ -1,3 +1,5 @@
+/* loops.c -- demonstrate that loops which count down are beneficical on ARM */
+
 int fact1(int N)
 {
     int i, fact = 1;

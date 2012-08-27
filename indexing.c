@@ -1,3 +1,5 @@
+/* indexing.c -- demonstrate that avoiding array indexing can result in tighter output */
+
 #include <string.h>
 
 #define NELEMS(a) ((int) (sizeof(a) / sizeof(a[0])))

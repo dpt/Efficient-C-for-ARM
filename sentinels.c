@@ -1,3 +1,5 @@
+/* sentinels.c -- demonstrate that inserting a known terminating value can create more efficient loops */
+
 int search1(int *list, int N, int want)
 {
     int i;

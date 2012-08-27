@@ -1,3 +1,5 @@
+/* localvar.c -- demonstrate that restricted-size local variables can damage performance */
+
 int checksum1(const int *data)
 {
     char i;

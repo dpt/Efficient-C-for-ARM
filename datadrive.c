@@ -1,3 +1,5 @@
+/* datadrive.c -- demonstrate that separating code and data can result in tighter output */
+
 #include <string.h>
 
 int nameToNumber(const char *name)

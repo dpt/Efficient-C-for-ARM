@@ -1,3 +1,5 @@
+/* bitfields.c -- demonstrate that bitfields create additional work */
+
 typedef unsigned int ShipFlags;
 
 typedef struct {
