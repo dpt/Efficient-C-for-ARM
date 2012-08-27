@@ -14,4 +14,3 @@ char addchars1(char a, char b)
 {
     return (char) (a + (b >> 1));
 }
-s
